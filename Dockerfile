@@ -8,4 +8,6 @@ EXPOSE 5000
 
 RUN npm i
 
-CMD ["npm", "run", "prisma:migrate"]
+RUN npm run build
+
+CMD ["npm", "start"]
