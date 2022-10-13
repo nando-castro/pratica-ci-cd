@@ -15,6 +15,6 @@ jobs:
           envkey_DATABASE_URL: "postgresql://${{secrets.POSTGRES_USER}}:${{secrets.POSTGRES_PASSWORD}}@db_students_postgres:5432/${{secrets.POSTGRES_DB}}"
           file_name: .env.test
       - name: Run tests
-        run: docker-compose -f docker-compose-test.yml run students_app_node npm run test
+        run: docker-compose -f docker-compose-test.yml run node_students_app npm run test
       - name: Build
         run: npm i && npm run build
